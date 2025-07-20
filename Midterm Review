@@ -1,0 +1,281 @@
+\documentclass [xcolor=svgnames] {beamer} 
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{booktabs, comment} 
+\usepackage{pgfpages}
+\usepackage{pgfplots}
+\usepackage{csquotes}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{geometry}
+\usetheme{Madrid}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,     % color of internal links
+    urlcolor=black       % color of external links
+}
+
+% COLORS 
+\definecolor{mqred}{RGB}{0, 90, 67}
+\definecolor{mqdeepred}{RGB}{0, 90, 67}
+\definecolor{mqgray}{RGB}{55, 58, 54}
+\definecolor{mqlightgray}{RGB}{255, 255, 255}
+\definecolor{mqmagenta}{RGB}{198, 0, 126}
+\usecolortheme[named=mqred]{structure}
+\setbeamercolor{title in head/foot}{bg=mqlightgray, fg=mqgray}
+\setbeamercolor{author in head/foot}{bg=mqdeepred}
+\setbeamercolor{page number in head/foot}{bg=mqdeepred, fg=mqlightgray}
+
+% FOOTNOTE ARRANGEMENTS
+
+\makeatletter
+\setbeamertemplate{footline}{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor\expandafter\ifblank\expandafter{\beamer@shortinstitute}{}{~~(\insertshortinstitute)}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=1ex,center]{page number in head/foot}%
+    \usebeamerfont{page number in head/foot}\insertframenumber{} / \inserttotalframenumber 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+\beamertemplatenavigationsymbolsempty
+
+
+% TITLE, AUTHORS, INSTITUTE, DATE
+
+\title[Econ 362. Macroeconomic Theory (Spring 2025) ]{Econ 362. Macroeconomic Theory \\ \textit{Midterm Review}}
+\author[Vladimir Marquez Stone]{Vladimir Marquez Stone}
+\institute[Binghamton University]{Binghamton University}
+\date{\March 5, 2025}
+
+\begin{document}
+
+% Slide 1
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Chapter 3: Productivity, Output, and Employment}
+    \begin{itemize}
+        \item \textbf{The production function}
+        \item The economy's output depends on:
+        \begin{itemize}
+            \item The quantity of inputs: labor ($N$), capital ($K$).
+            \item The productivity of these inputs ($A$).
+        \end{itemize}
+        \item The production function:
+        \begin{equation}
+            Y = A F(K, N)
+        \end{equation}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Graph: The Production Function}
+    \begin{center}
+        \includegraphics[width=0.6\textwidth]{production_function.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Labor Market Equilibrium}
+    \begin{itemize}
+        \item Firms demand labor based on the marginal product of labor (MPN).
+        \item Workers supply labor based on real wages.
+        \item Equilibrium is where labor supply equals labor demand.
+    \end{itemize}
+    \begin{equation}
+        w^* = MPN(N^*)
+    \end{equation}
+\end{frame}
+
+\begin{frame}{Graph: Labor Market Equilibrium}
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{labor_market.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Example: Labor Market Effects of an Adverse Supply Shock}
+    \begin{itemize}
+        \item An adverse supply shock reduces the marginal product of labor (MPN).
+        \item Labor demand shifts leftward: $N_D^1 \to N_D^2$.
+        \item Equilibrium moves from $A$ to $B$.
+        \item The real wage decreases from $w_1$ to $w_2$.
+        \item Full-employment level of labor falls from $N_1$ to $N_2$.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Full-Employment Output and Supply Shock}
+    \begin{itemize}
+        \item Full-employment output is given by:
+        \begin{equation}
+            Y = A F(K, N)
+        \end{equation}
+        \item Supply shock reduces productivity ($A$) and employment ($N$), lowering $Y$.
+        \item Direct effect: Lower $A$ reduces output for given $K$ and $N$.
+        \item Indirect effect: Lower $N$ further reduces output.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Chapter 4: Consumption, Saving, and Investment}
+    \begin{itemize}
+        \item Aggregate demand consists of:
+        \begin{equation}
+            Y &= C + I + G + NX
+        \end{equation}
+        \item In a closed economy ($NX=0$), we simplify to:
+        \begin{equation}
+            Y &= C + I + G
+        \end{equation}
+        \item Government purchases ($G$) are exogenous.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Consumption and Saving}
+    \begin{itemize}
+                \item Equivalently, in terms of saving and investment:
+        \begin{equation}
+            S^d &= I^d
+        \end{equation}
+        \item Such that the desired national saving ($S^d$):
+        \begin{equation}
+            S^d &= Y - C^d - G
+        \end{equation}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Graph: Goods Market Equilibrium}
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{goodsmarket.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Investment Decision}
+    \begin{itemize}
+        \item Firms invest based on the user cost of capital ($uc$):
+        \begin{equation}
+            uc &= (r + d) P_K
+        \end{equation}
+        \item Optimal capital stock is found where:
+        \begin{equation}
+            MPK_f &= uc
+        \end{equation}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Graph: Goods Market Equilibrium}
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{investment.png}
+    \end{center}
+\end{frame}
+% Slide 1: Intertemporal Choice Model
+\begin{frame}{Appendix: Intertemporal Choice Model}
+\textbf{Assumptions:}
+\begin{itemize}
+    \item Two-period model: present and future.
+    \item Fixed income, wealth, and real interest rate.
+\end{itemize}
+\textbf{Budget Constraint:}
+\begin{equation}
+    c_f = (y + a - c)(1 + r) + y_f
+\end{equation}
+\textbf{Present Value of Lifetime Resources (PVLR):}
+\begin{equation}
+    PVLR = a + y + \frac{y_f}{1+r}
+\end{equation}
+\end{frame}
+
+% Slide 2: Budget Line & Consumer Preferences
+\begin{frame}{Consumer Preferences}
+\textbf{Consumer Preferences:}
+\begin{itemize}
+    \item Consumers maximize lifetime utility.
+    \item Indifference curves show combinations of $c$ and $c_f$ yielding the same utility.
+    \item Optimal consumption choice where \textit{MRS} = $1 + r$.
+    \begin{center}
+        \includegraphics[width=0.6\textwidth]{consumerpreferences.png}
+    \end{center}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Chapter 6: Long-run Economic Growth}
+    \begin{itemize}
+        \item \textbf{Growth accounting:} From our production function:
+        \[ Y = A F(K, N) \]
+        \item We can write the following growth equation:
+        \[ \frac{\Delta Y}{Y} = \frac{\Delta A}{A} + \alpha_K \frac{\Delta K}{K} + \alpha_N \frac{\Delta N}{N} \]
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Solow Model Dynamics}
+    \begin{itemize}
+        \item A model of capital accumulation and steady state.
+        \item Graphical representation of output, saving, and depreciation.
+        \item Effects of changes in saving rate and population growth.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Capital Accumulation in the Solow Model}
+    \begin{itemize}
+            \item Defining output per worker: $y = Y/N$, capital per worker: $k = K/N$.
+        \item We have the per-worker production function:
+        \begin{equation}
+            y = f(k) = A k^{\alpha}
+        \end{equation}
+        \item Capital evolves, in per-worker terms:
+        \begin{equation}
+            \dot{k} = s f(k) - (n + d) k
+        \end{equation}
+        where $s$ is the savings rate, $d$ is the depreciation rate, and $n$ is the labor force growth rate.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Graph: Capital Accumulation in the Solow Model}
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{solow_steadystate.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Steady-State Capital and Consumption}
+    \begin{itemize}
+        \item Consumption function in steady state:
+        \[ c = f(k) - (n + d)k \]
+        \item Equilibrium condition:
+        \[ s f(k) = (n + d) k \]
+        \item The steady-state is where capital per worker remains constant ($\dot{k} = 0$):
+        \begin{equation}
+            s f(k^*) = (n + d) k^*
+        \end{equation}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Effects of Parameter Changes}
+    \begin{itemize}
+        \item Higher savings rate ($s \uparrow$) \rightarrow higher  $k^*, y^*, c^*$.
+        \item Higher depreciation rate ($\delta \uparrow$) or population growth rate ($n \uparrow$) \rightarrow lower  $k^*, y^*, c^*$.
+        \item Higher productivity ($A \uparrow$) \rightarrow higher  $k^*, y^*, c^*$.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Example 1: Higher Savings Rate}
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{case_1.png}
+    \end{center}
+
+\end{frame}
+
+\begin{frame}{Example 2: Population Growth Increase}
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{case_2.png}
+    \end{center}
+
+\end{frame}
+
+
+
+\end{document}
