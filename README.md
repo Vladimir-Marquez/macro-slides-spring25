@@ -1,5 +1,5 @@
 # macro-slides-spring25
-LaTeX materials from my Spring 2025 undergraduate macroeconomics course at Binghamton University. Includes slides, problem set questions, and visual examples.
+Sample LaTeX materials from my Spring 2025 undergraduate macroeconomics course at Binghamton University. Includes slides, problem set questions, and visual examples.
 
 
 *Course: Econ 362 – Binghamton University*  
@@ -15,7 +15,7 @@ This repository contains LaTeX Beamer slides for **Econ 362: Macroeconomic Theor
 - Diagrams and figures
 - Midterm and final review sessions
 
-These materials are **based on** the 11th edition of *Macroeconomics* by Andrew B. Abel, Ben S. Bernanke, and Dean Croushore (Pearson, 2021). It is built with
+These materials are **based on** the 11th edition of *Macroeconomics* by Andrew B. Abel, Ben S. Bernanke, and Dean Croushore (Pearson, 2021). It is built with:
 
 - `LaTeX` + `Beamer` theme
 - `pgfplots` and `TikZ` for diagrams
@@ -27,7 +27,7 @@ These materials are **based on** the 11th edition of *Macroeconomics* by Andrew 
 | File | Description |
 |------|-------------|
 | `Final Review` | LaTeX slides for final exam preparation |
-| `Midterm Review` | Slides covering core concepts for the midterm |
+| `Midterm Review` | LaTeX slides for midterm exam preparation |
 | `LICENSE` | MIT License |
 | `README.md` | This file |
 
